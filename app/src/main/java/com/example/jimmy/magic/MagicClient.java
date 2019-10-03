@@ -20,6 +20,7 @@ public class MagicClient implements Runnable{
 
     String ip;
     String url = "www.bing.com";
+    String cliCommand = "firefox";
 
     Menu menu;
 
@@ -40,25 +41,25 @@ public class MagicClient implements Runnable{
             DataOutputStream out =new DataOutputStream(socket.getOutputStream());
             while(true){
                 if(command == 1){
-                    out.writeUTF("Calculator");
+                    out.writeUTF("calc");
                     out.flush();
                     command = 0;
                 }
 
                 if(command == 2){
-                    out.writeUTF("Notepad");
+                    out.writeUTF("notepad");
                     out.flush();
                     command = 0;
                 }
 
                 if(command == 3){
-                    out.writeUTF("Logout");
+                    out.writeUTF("shutdown -l");
                     out.flush();
                     command = 0;
                 }
 
                 if(command == 4){
-                    out.writeUTF("Shutdown");
+                    out.writeUTF("shutdown -s");
                     out.flush();
                     command = 0;
                 }
@@ -74,6 +75,11 @@ public class MagicClient implements Runnable{
                 }
                 if(command == 7){
                     out.writeUTF("stopMouse");
+                    out.flush();
+                    command = 0;
+                }
+                if(command == 8){
+                    out.writeUTF(cliCommand);
                     out.flush();
                     command = 0;
                 }
@@ -102,6 +108,10 @@ public class MagicClient implements Runnable{
 
     public void setURL(String newurl){
         url = newurl;
+    }
+
+    public void setCliCommand(String cli){
+        cliCommand = cli;
     }
 
 }

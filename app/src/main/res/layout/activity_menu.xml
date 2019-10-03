@@ -44,21 +44,6 @@
         android:text="Open Notepad" />
 
     <Button
-        android:id="@+id/shutdownButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="135dp"
-        android:layout_marginLeft="135dp"
-        android:layout_marginTop="511dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:text="Shutdown Target" />
-
-    <Button
         android:id="@+id/logoutButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,9 +51,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="145dp"
-        android:layout_marginLeft="145dp"
-        android:layout_marginTop="457dp"
+        android:layout_marginStart="142dp"
+        android:layout_marginLeft="142dp"
+        android:layout_marginTop="480dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:text="Logout Target" />
@@ -79,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="266dp" />
+        android:layout_marginTop="200dp" />
 
     <Button
         android:id="@+id/chromeButton"
@@ -88,9 +73,28 @@
         android:layout_alignEnd="@+id/noteButton"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="343dp"
+        android:layout_marginTop="250dp"
         android:layout_marginEnd="-1dp"
         android:text="Open Chrome" />
+
+    <EditText
+        android:id="@+id/CLIText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp" />
+
+    <Button
+        android:id="@+id/cliButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/noteButton"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="-4dp"
+        android:text="Send CLI Comm" />
 
     <Button
         android:id="@+id/SpamMouse"
@@ -104,6 +108,20 @@
         android:layout_marginBottom="467dp"
         android:text="Spam Mouse" />
 
+    <Button
+        android:id="@+id/shutdownButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="129dp"
+        android:layout_marginLeft="129dp"
+        android:layout_marginTop="530dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Shutdown Target" />
 
 
 </RelativeLayout>

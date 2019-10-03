@@ -1,6 +1,7 @@
 package com.example.jimmy.magic;
 
 import android.content.Intent;
+import android.preference.EditTextPreference;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,11 +17,14 @@ public class Menu extends AppCompatActivity {
     private Button logoutButton;
     private Button chromeButton;
     private Button spamMouse;
+    private Button cliButton;
 
     private EditText urlText;
+    private EditText CLIText;
 
     private String ip;
     private String url = "www.bing.com";
+    private String cliCommand = "dir";
 
     private MagicClient Mc;
 
@@ -34,6 +38,7 @@ public class Menu extends AppCompatActivity {
         ip = getIntent().getStringExtra("key");
 
         urlText = (EditText) findViewById(R.id.URLText);
+        CLIText = (EditText) findViewById(R.id.CLIText);
 
         Mc = new MagicClient(ip);
         new Thread(Mc).start();
@@ -85,6 +90,15 @@ public class Menu extends AppCompatActivity {
                 url = urlText.getEditableText().toString();
                 Mc.setURL(url);
                 Mc.setCommand(5);
+            }
+        });
+
+        cliButton = (Button) findViewById(R.id.cliButton);
+        cliButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                cliCommand = CLIText.getEditableText().toString();
+                Mc.setCliCommand(cliCommand);
+                Mc.setCommand(8);
             }
         });
 
